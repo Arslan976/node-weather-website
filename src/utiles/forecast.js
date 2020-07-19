@@ -13,7 +13,11 @@ const forecast = (longitude, latitude, callback) => {
             //     feelsLike: response.body.current.feelslike,
             //     weatherdescription: response.body.current.weather_descriptions[0]
             // }
-            let data = `${body.current.weather_descriptions[0]} through out the day. it is currently ${body.current.temperature} and it feels like ${body.current.feelslike}`;
+            let data = `${body.current.weather_descriptions[0]} through out the day.
+             it is currently ${body.current.temperature}, 
+             it feels like ${body.current.feelslike},
+            the time of observation was ${body.current.observation_time} and
+            at which humidity was ${body.current.humidity}%`;
             callback(undefined, data);
         }
     })
